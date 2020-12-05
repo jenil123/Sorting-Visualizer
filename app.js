@@ -220,6 +220,7 @@ async function mergesort(l,mid,r)
         
         
         
+        
     }
     while(i<=mid)
     {
@@ -311,14 +312,7 @@ quicksort.addEventListener('click',async ()=>{
     selectionsort.disabled=false
     insertionsort.disabled=false
     heapsort.disabled=false  
-    // let child=area.childNodes;
-    // for(let i=0;i<len;i++)
-    // {
-    //     if(child[i].style.backgroundColor=="green")
-    //     {
-    //         console.log(i)
-    //     }
-    // }
+
 })
 async function quickSort(l,r)
 {
@@ -327,7 +321,6 @@ async function quickSort(l,r)
     {
         let child=area.childNodes;
         let pivot=await qsort(l,r);
-        // await sleep(10);
         if(run===false)
         {
             await pauseAnimation();
@@ -343,26 +336,26 @@ async function qsort(l,r,pivot)
     let key=array[r];
     let index=l;
     let child=area.childNodes;
-    //child[index].style.backgroundColor="red"
     for(let i=l;i<=r;i++)
     {
+        
+        child[index].style.backgroundColor="red"
+        child[i].style.backgroundColor="yellow"
         if(run===false)
         {
             await pauseAnimation();
         }
-        child[i].style.backgroundColor="yellow"
         await sleep(10);
         child[i].style.backgroundColor="green";
+        child[index].style.backgroundColor="green"
         if(array[i]<key)
         {
             let temp=array[index];
             array[index]=array[i];
             array[i]=temp;
-            //child[index].style.backgroundColor="blue";
             child[index].style.height=(array[index]*10)+"px";
             child[i].style.height=(array[i]*10)+"px";
             index++;
-            //child[index].style.backgroundColor="brown"
         }
         child[i].style.backgroundColor=pivot
         
@@ -401,9 +394,7 @@ async function maxHeap(index,n)
     let r=2*index+2;
     
     let max=index;
-    // child[l].style.backgroundColor="yellow"
-    // child[r].style.backgroundColor="red"
-    // child[max].style.backgroundColor="blue"
+
     console.log(n)
     
     
@@ -414,15 +405,13 @@ async function maxHeap(index,n)
         {
             await pauseAnimation();
         }
-        //child[r].style.backgroundColor="red"
-        //child[max].style.backgroundColor="blue"
+
         await sleep(10);
         child[l].style.backgroundColor="green"
         max=l;
     }
     if(r<n&&array[r]>array[max])
     {
-        //child[l].style.backgroundColor="green"
         child[r].style.backgroundColor="red"
         if(run===false)
         {
@@ -439,7 +428,6 @@ async function maxHeap(index,n)
         array[index]=temp;
         child[max].style.height=(array[max]*10)+"px";
         child[index].style.height=(array[index]*10)+"px";
-        //child[index].style.backgroundColor="blue"
         await maxHeap(max,n);
     }
 }
@@ -456,10 +444,7 @@ async function heapSort()
       }
       await sleep(10);
     for (i = array.length - 1; i > 0; i--) {
-        // if(run===false)
-        // {
-        //     await pauseAnimation();
-        // }
+
         child[i].style.backgroundColor="blue"
         let temp=array[0];
         array[0]=array[i];
