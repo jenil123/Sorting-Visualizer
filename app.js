@@ -410,6 +410,10 @@ async function maxHeap(index,n)
     if(l<n&&array[l]>array[max])
     {
         child[l].style.backgroundColor="yellow"
+        if(run===false)
+        {
+            await pauseAnimation();
+        }
         //child[r].style.backgroundColor="red"
         //child[max].style.backgroundColor="blue"
         await sleep(10);
@@ -420,6 +424,10 @@ async function maxHeap(index,n)
     {
         //child[l].style.backgroundColor="green"
         child[r].style.backgroundColor="red"
+        if(run===false)
+        {
+            await pauseAnimation();
+        }
         await sleep(10);
         child[r].style.backgroundColor="green"
         max=r;
@@ -439,11 +447,19 @@ async function heapSort()
 {
     let n = array.length
     let child=area.childNodes;
+    if(run===false)
+        {
+            await pauseAnimation();
+        }
     for (let i = Math.floor(n / 2); i >= 0; i -= 1)      {
         await maxHeap( i,n)
       }
       await sleep(10);
     for (i = array.length - 1; i > 0; i--) {
+        // if(run===false)
+        // {
+        //     await pauseAnimation();
+        // }
         child[i].style.backgroundColor="blue"
         let temp=array[0];
         array[0]=array[i];
@@ -454,6 +470,10 @@ async function heapSort()
         n--
         await maxHeap( 0,n)
     }
+    if(run===false)
+        {
+            await pauseAnimation();
+        }
     child[0].style.backgroundColor="blue"
 }
 
