@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="resources/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+   
+    <div id="topLine" style="padding: 50px;"  margin = "15px">
+        <div class="slidecontainer" style="display: inline-block" padding= "15px">
+            <p>Generate array</p>
+            <input type="range" min="10" max="250" value="130" id="range">
+        </div>
+        <div id="buttons" style="display: inline-block" padding= "15px">
+            <button type="button" id="merge" class="btn btn-secondary mr-2 ml-2">Merge Sort</button>
+            <button type="button" id="quick" class="btn btn-success mr-2">Quick Sort </button>
+            <button type="button"  id="bubble" class="btn btn-danger mr-2">Bubble Sort</button>
+            <button type="button" id="selection" class="btn btn-warning mr-2">Selection Sort</button>
+            <button type="button" id="insertion"  class="btn btn-info mr-2">Insertion Sort</button>
+            <button type="button" id="heap" class="btn btn-dark mr-2">Heap Sort</button>
+            <a href="about.html"class="btn btn-info mr-2">
+                About Me
+            </a>
+        </div>
+    </div>
+    <div id="area" class="area">
+    </div>
+    <div class="play-pause" >
+        <button type="button" id="play" class="btn btn-secondary mr-2" >Play</button>
+        <button type="button" id="pause" class="btn btn-success mr-2" >Pause </button>
+    </div>
+    
+    <footer>
+        <p class="copyright">© Made by Jenil Mehta</p>
+    </footer>
+    <script src="app.js">
+    </script>
+</body>
+</html>

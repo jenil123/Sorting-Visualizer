@@ -1,0 +1,37 @@
+.body{
+    background-color: pink;
+}
+
+.area {
+    position: relative;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: rotate(180deg) scaleX(-1);
+
+
+}
+.element {
+    margin-left: 2px;
+    background-color:green  ;
+}
+.play-pause {
+    text-align: center;
+}
+#play {
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(61, 61, 122);
+    border-radius: 10px;
+}
+
+#pause {
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(61, 61, 122);
+    border-radius: 10px;
+}
