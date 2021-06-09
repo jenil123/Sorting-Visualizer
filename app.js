@@ -325,29 +325,29 @@ quicksort1.addEventListener('click',async ()=>{
     heapsort.disabled=false  
 
 })
-// quicksort2.addEventListener('click',async ()=>{
-//     slider.disabled=true;
-//     quicksort1.disabled=true;
-//     quicksort2.disabled=true;
-//     mergeSort.disabled=true
-//     bubblesort.disabled=true
-//     selectionsort.disabled=true
-//     insertionsort.disabled=true
-//     heapsort.disabled=true
-//     run=true;
-//     console.log(array)
-//     await quickSort1(0,len-1);
-//     console.log(array)
-//     slider.disabled=false;
-//     quicksort1.disabled=false;
-//     quicksort2.disabled=false;
-//     mergeSort.disabled=false
-//     bubblesort.disabled=false
-//     selectionsort.disabled=false
-//     insertionsort.disabled=false
-//     heapsort.disabled=false  
+quicksort2.addEventListener('click',async ()=>{
+    slider.disabled=true;
+    quicksort1.disabled=true;
+    quicksort2.disabled=true;
+    mergeSort.disabled=true
+    bubblesort.disabled=true
+    selectionsort.disabled=true
+    insertionsort.disabled=true
+    heapsort.disabled=true
+    run=true;
+    console.log(array)
+    await quickSort1(0,len-1);
+    console.log(array)
+    slider.disabled=false;
+    quicksort1.disabled=false;
+    quicksort2.disabled=false;
+    mergeSort.disabled=false
+    bubblesort.disabled=false
+    selectionsort.disabled=false
+    insertionsort.disabled=false
+    heapsort.disabled=false  
 
-// })
+})
 async function quickSort(l,r)
 {
     
